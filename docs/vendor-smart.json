@@ -1,0 +1,199 @@
+{
+	"_type": "export",
+	"__export_format": 4,
+	"__export_date": "2024-09-28T22:54:27.256Z",
+	"__export_source": "insomnia.desktop.app:v10.0.0",
+	"resources": [
+		{
+			"_id": "req_e5991a1a19344c4bb31c9d581096838a",
+			"parentId": "wrk_a76758162f1544749955258220f06cd7",
+			"modified": 1727556522250,
+			"created": 1727539325172,
+			"url": "{{ _.baseUrl }}/vendor/summary",
+			"name": "vendor stats",
+			"description": "",
+			"method": "GET",
+			"body": {},
+			"parameters": [
+				{
+					"id": "pair_1f6556d0034546348731b5aa2e7413b2",
+					"name": "service",
+					"value": "Air Conditioning",
+					"description": "",
+					"disabled": false
+				},
+				{
+					"id": "pair_feac03c302cd4443849b941229906ea9",
+					"name": "location",
+					"value": "Fayette TX",
+					"description": "",
+					"disabled": false
+				}
+			],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1727539325172,
+			"isPrivate": false,
+			"pathParameters": [],
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingRebuildPath": true,
+			"settingFollowRedirects": "global",
+			"_type": "request"
+		},
+		{
+			"_id": "wrk_a76758162f1544749955258220f06cd7",
+			"parentId": null,
+			"modified": 1727534052318,
+			"created": 1727534052318,
+			"name": "vendor-smart",
+			"description": "",
+			"scope": "collection",
+			"_type": "workspace"
+		},
+		{
+			"_id": "req_29f624e94cb548b3a14f34e3b9dcae56",
+			"parentId": "wrk_a76758162f1544749955258220f06cd7",
+			"modified": 1727563965064,
+			"created": 1727539283194,
+			"url": "{{ _.baseUrl }}/vendor/potentials",
+			"name": "search",
+			"description": "",
+			"method": "GET",
+			"body": {},
+			"parameters": [
+				{
+					"id": "pair_dc91a93923cf482a803938c6d3430eed",
+					"name": "jobId",
+					"value": "1",
+					"description": "",
+					"disabled": false
+				}
+			],
+			"headers": [],
+			"authentication": {
+				"username": "{{ _.authUser }}",
+				"password": "{{ _.authPass }}",
+				"type": "basic",
+				"disabled": false
+			},
+			"metaSortKey": -1727539283194,
+			"isPrivate": false,
+			"pathParameters": [],
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingRebuildPath": true,
+			"settingFollowRedirects": "global",
+			"_type": "request"
+		},
+		{
+			"_id": "req_26715b4fc97d4368a2c71230e41b3770",
+			"parentId": "wrk_a76758162f1544749955258220f06cd7",
+			"modified": 1727563958067,
+			"created": 1727539257053,
+			"url": "{{ _.baseUrl }}/job/create",
+			"name": "create job",
+			"description": "",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"name\": \"Job 1\",\n\t\"serviceCategory\": \"Air Conditioning\",\n\t\"location\": \"Glades FL\"\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"authentication": {
+				"username": "{{ _.authUser }}",
+				"password": "{{ _.authPass }}",
+				"type": "basic"
+			},
+			"metaSortKey": -1727539257053,
+			"isPrivate": false,
+			"pathParameters": [],
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingRebuildPath": true,
+			"settingFollowRedirects": "global",
+			"_type": "request"
+		},
+		{
+			"_id": "req_2d15360b10c4458985939d6e6bad5044",
+			"parentId": "wrk_a76758162f1544749955258220f06cd7",
+			"modified": 1727560702108,
+			"created": 1727539218805,
+			"url": "{{ _.baseUrl }}/vendor/create",
+			"name": "create vendor",
+			"description": "",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"name\": \"Vendor 1\",\n\t\"services\": [\n\t\t{\"name\": \"Air Conditioning\", \"compliant\": false}\n\t],\n\t\"location\": \"Fayette TX\"\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"authentication": {
+				"username": "{{ _.authUser }}",
+				"password": "{{ _.authPass }}",
+				"type": "basic",
+				"disabled": false
+			},
+			"metaSortKey": -1727539218805,
+			"isPrivate": false,
+			"pathParameters": [],
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingRebuildPath": true,
+			"settingFollowRedirects": "global",
+			"_type": "request"
+		},
+		{
+			"_id": "env_e5907275f5fa4a6654ae0789f29497240eef6987",
+			"parentId": "wrk_a76758162f1544749955258220f06cd7",
+			"modified": 1727557114962,
+			"created": 1727534052324,
+			"name": "Base Environment",
+			"data": {
+				"baseUrl": "http://localhost:3000/v1",
+				"authUser": "vs_tech_challenge",
+				"authPass": "SuperSecurePassword123@"
+			},
+			"dataPropertyOrder": {
+				"&": [
+					"baseUrl",
+					"authUser",
+					"authPass"
+				]
+			},
+			"color": null,
+			"isPrivate": false,
+			"metaSortKey": 1727534052324,
+			"_type": "environment"
+		},
+		{
+			"_id": "jar_e5907275f5fa4a6654ae0789f29497240eef6987",
+			"parentId": "wrk_a76758162f1544749955258220f06cd7",
+			"modified": 1727534052324,
+			"created": 1727534052324,
+			"name": "Default Jar",
+			"cookies": [],
+			"_type": "cookie_jar"
+		}
+	]
+}

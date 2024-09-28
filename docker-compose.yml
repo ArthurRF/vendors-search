@@ -1,0 +1,9 @@
+services:
+  
+  vendor_smart_app:
+    build: .
+    container_name: vendor_smart_app
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/app
