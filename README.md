@@ -34,7 +34,7 @@ This project is an application to search for vendors related to specific jobs!
    ```
 
 4. Collection tests:
-	 Import the file that is in the folder `docs/vendor-smart.json` into your HTTP tests application (INSOMNIA / POSTMAN)
+	 Import the file that is in the folder `docs/vendor-smart.json` into your HTTP tests application (INSOMNIA / POSTMAN).
 	 Use the routes created inside there to test the project functionalities
 
 ## Stopping the project
