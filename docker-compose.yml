@@ -1,13 +1,6 @@
 services:
-  
   vendor_smart_app:
     build: .
     container_name: vendor_smart_app
     ports:
       - 3000:3000
-    environment:
-      - SERVER_PORT=3000
-      - ADMIN_USER=vs_tech_challenge
-      - ADMIN_PASSWORD=SuperSecurePassword123@
-    volumes:
-      - .:/app
