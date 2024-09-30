@@ -28,7 +28,7 @@ export class HttpExceptionFilter implements ExceptionFilter {
         : validationMessages;
 
       return response.status(status).json({
-        mensagem: firstErrorMessage,
+        message: firstErrorMessage,
       });
     }
 

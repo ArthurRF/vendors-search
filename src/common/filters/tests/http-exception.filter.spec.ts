@@ -32,7 +32,7 @@ describe('HttpExceptionFilter', () => {
 
     expect(response.status).toHaveBeenCalledWith(400);
     expect(response.json).toHaveBeenCalledWith({
-      mensagem: 'Validation failed',
+      message: 'Validation failed',
     });
   });
 
@@ -42,7 +42,7 @@ describe('HttpExceptionFilter', () => {
 
     expect(response.status).toHaveBeenCalledWith(409);
     expect(response.json).toHaveBeenCalledWith({
-      mensagem: 'Resource conflict',
+      message: 'Resource conflict',
     });
   });
 
@@ -65,7 +65,7 @@ describe('HttpExceptionFilter', () => {
 
     expect(response.status).toHaveBeenCalledWith(400);
     expect(response.json).toHaveBeenCalledWith({
-      mensagem: 'First error',
+      message: 'First error',
     });
   });
 });
